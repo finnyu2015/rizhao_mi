@@ -1,4 +1,3 @@
-
 function demGetUrlsuffix() {
 		var bridge = demtcfg.isBridge() ;
     return bridge ? '.func' : '';
@@ -129,6 +128,10 @@ var dem = (function() {
             if (url.indexOf('_rq=') == -1) {
                 var conj = url.indexOf('?') > -1 ? '&' : '?';
                 setting.url += conj + "_rq=" + (++reqId);
+            }
+            if(demtcfg.erpHostTest == true) {
+            	var conj = setting.url.indexOf('?') > -1 ? '&' : '?';
+                setting.url += conj + "testenv=" + "true";
             }
             if (url.indexOf('signon.jsp') == -1) {
                 repostPool[reqId] = setting;
@@ -383,7 +386,7 @@ var dem = (function() {
             }
 
 
-            login2home(compId, userId, pwd, 'home');
+            login2home(compId, userId, pwd, portalPage);
 
             saveData('_compId', compId);
             saveData('_userId', userId);
