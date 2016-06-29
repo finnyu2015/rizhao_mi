@@ -11,7 +11,8 @@ demtcfg.portalHref="icscApp.html#demjPortal";
 
 
 //demtcfg.loginHost =  window.location.pathname.split("/")[1];
-demtcfg.erpHost =  "";
+demtcfg.erpHost = "";
+demtcfg.erpHostTest = false;
 demtcfg.lite = true ;
 
 //demtcfg.erpHost =  "http://groupeipt.csc.com.tw";
