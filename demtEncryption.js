@@ -1,6 +1,6 @@
-//class namespace  $Id: demtEncryption.js,v 1.1 2016/03/02 09:09:29 i20496 Exp $
+//class namespace  $Id: demtEncryption.js,v 1.1 2015/11/18 01:39:11 i20496 Exp $
 var demEnc = (function() {
-    var genDezKp = true;
+    var genDezKp = (demtcfg)?demtcfg.zipcode: true ;
     var demkeys;
     var encryptedToken = "Xicsc89821mlknvzjuuy";
 
